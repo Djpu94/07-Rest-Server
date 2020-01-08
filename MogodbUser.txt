@@ -2,4 +2,8 @@ user: Djpu1994
 pass:3toMUJ2dkhA5iWd8
 MongodbDB URL: mongodb+srv://Djpu1994:3toMUJ2dkhA5iWd8@curso-pewtt.mongodb.net/cafe
 
-git
+function parseJwt (token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace('-', '+').replace('_', '/');
+    return JSON.parse(window.atob(base64));
+};

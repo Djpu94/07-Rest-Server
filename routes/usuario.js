@@ -9,12 +9,6 @@ const { verificaToken, VerificaRole } = require('../server/middlewares/autentica
 const app = express();
 
 app.get('/usuario', verificaToken ,(req, res) => {
-
-    return res.json({
-        usuario:req.usuario,
-        nombre: req.usuario.nombre,
-        email: req.usuario.email
-    });
     
     let desde = req.query.desde || 0;
     desde = Number(desde);
